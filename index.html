@@ -1,94 +1,135 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        body {
+  background-image: url("/images/bg.png");
+}
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
 
-<style>
-    .inter{
-        font-family: "Inter", sans-serif;
-    }
+        @keyframes appear {
+            from {
+                width: 0;
+                opacity: 0;
+            }
 
-    @keyframes appear {
-        from { width: 0; opacity: 0; }
-        to { width: 24px; opacity: 1; }
-    }
+            to {
+                width: 24px;
+                opacity: 1;
+            }
+        }
 
-    .hover-appear:hover svg {
-        animation: appear 0.3s forwards;
-    }
-</style>
+        .hover-appear:hover svg {
+            animation: appear 0.3s forwards;
+        }
+    </style>
 
 
 </head>
-<body class="Inter">
 
-    <header>
-        <nav class=" bg-[#0C4B54] md:flex md:items-center md:justify-between">
-            <div class="px-20 py-11 flex justify-between items-center">
-            <span class="cursor-pointer">
-                
-            <img  class=" h-10 inline" src="images/logowhite.png">
-        
-        </span>  
-        
-        <span class="text-3xl cursor-pointer md:hidden block text-white hover:text-[#E8F549]">
-            <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
-        </span>
-        
-        </div>
-      
-        
-        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#0C4B54]
-        w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7
-        md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500
-         text-white font-medium ">
-            <div class="py-14 md:flex space-x-10 ">  
-                <li class="py-0"></li>
-            <li class="my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Home</a>
-            </li>
-            <li class=" my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">About</a>
-            </li>
-            <li class=" my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Services</a>
-            </li>
-            <li class=" my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Works</a>
-            </li>
-        </div> 
+<body class="bg-cover bg-center h-screen Inter ">
 
-            <button class="text-[#E8F549] ml-8 mr-20 text-base font-medium bg-transparent border-solid border-2 rounded-full border-[#E8F549] hover:bg-[#E8F549] hover:text-[#0C4B54] hover:font-semibold duration-200 px-8 py-3">
-                Contact
+    <header class="text-white">
+        <nav class="flex items-center justify-between px-20 h-20">
+            <img src="images/logowhite.png" alt="Logo" class="h-10">
+    
+          
+            <div class="hidden lg:flex items-center  py-10 space-x-10">
+                <ul class="flex items-center space-x-10  text-xl font-medium">
+                    <li><a href="#" class="hover:text-[#E8F549] duration-200">Home</a></li>
+                    <li><a href="#" class="hover:text-[#E8F549] duration-200">About</a></li>
+                    <li><a href="#" class="hover:text-[#E8F549] duration-200">Services</a></li>
+                    <li><a href="#" class="hover:text-[#E8F549] duration-200">Works</a></li>
+                </ul>
+                <button class="text-l  border-2 border-[#E8F549] px-10 py-2 rounded-full text-[#E8F549] font-bold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">Contact</button>
+            </div>
+    
+            
+            <button id="mobile-menu-toggle" class="lg:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars fa-lg"></i>
             </button>
-       
-
-        </ul>
-
-
         </nav>
+    
+        
+        <div id="mobile-menu" class="hidden lg:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Services</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Works</a>
+                <button class="border-2 border-[#E8F549] px-8 py-4 rounded-full text-[#E8F549] font-semibold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">Contact</button>
+            </div>
+        </div>
     </header>
+
+<section>
+    <div class="hero  min-h-screen mx-auto">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-x-32">
+          <img
+            src="images/banner.png"/>
+          <div>
+            <h1 class="text-6xl font-bold text-white py-2.5">I am Ehashanul</h1>
+            <h1 class="text-6xl font-bold text-white"><span class="text-[#E8F549] text-6xl font-bold">UI/UX</span> Designer</h1>
+            <p class="py-6 text-white text-xl text-justify">
+                As a fresh graduate with a profound passion for technology and computer science,
+                 I am dedicated to leveraging technological advancements to create meaningful change.
+                  My enthusiasm lies in solving complex problems and crafting inventive solutions, 
+                  thriving at the intersection of creativity and technical expertise. I am committed to 
+                  applying my skills to make a positive impact and drive innovation in the ever-evolving tech landscape
+            </p>
+            <button class="btn btn-warning hover-appear hover:duration-300 bg-transparent 
+            border-2 border-[#E8F549] hover:text-[#0C4B54] text-l rounded-full text-white hover:bg-[#E8F549] hover:border-[#E8F549] hover:font-bold ">
+                <h1>Download CV</h1>
+                <svg class="overflow-hidden w-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929C7.68342 10.9024 8.31658 10.9024 8.70711 11.2929L12 14.5858L15.2929 11.2929C15.6834 10.9024 16.3166 10.9024 16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L12.7071 16.7071Z" fill="#0C4B54"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C12.5523 2 13 2.44772 13 3V15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15V3C11 2.44772 11.4477 2 12 2Z" fill="#0C4B54"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 12C5.55228 12 6 12.4477 6 13V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V13C18 12.4477 18.4477 12 19 12C19.5523 12 20 12.4477 20 13V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V13C4 12.4477 4.44772 12 5 12Z" fill="#0C4B54"/>
+                    </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+</section>
+
 
 
 <script>
-    function Menu(e){
-        let list = document.querySelector('ul');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      e.name === 'menu' ?  (e.name = "close",list.classList.add('top-[80px]'),list.classList.add('opacity-100')) :
-       (e.name  = "menu", list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-    }
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        const isMenuOpen = !mobileMenu.classList.contains('hidden');
+        menuToggle.innerHTML = isMenuOpen 
+            ? '<i class="fa-solid fa-times fa-lg"></i>' 
+            : '<i class="fa-solid fa-bars fa-lg"></i>';
+    });
+});
+
 </script>
+
+
 </body>
+
 </html>
