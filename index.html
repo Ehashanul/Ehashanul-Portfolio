@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+<style>
+    .inter{
+        font-family: "Inter", sans-serif;
+    }
+
+    @keyframes appear {
+        from { width: 0; opacity: 0; }
+        to { width: 24px; opacity: 1; }
+    }
+
+    .hover-appear:hover svg {
+        animation: appear 0.3s forwards;
+    }
+</style>
+
+
+</head>
+<body class="Inter">
+
+    <header>
+        <nav class=" bg-[#0C4B54] md:flex md:items-center md:justify-between">
+            <div class="px-20 py-11 flex justify-between items-center">
+            <span class="cursor-pointer">
+                
+            <img  class=" h-10 inline" src="images/logowhite.png">
+        
+        </span>  
+        
+        <span class="text-3xl cursor-pointer md:hidden block text-white hover:text-[#E8F549]">
+            <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+        </span>
+        
+        </div>
+
+     
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#0C4B54]
+        w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7
+        md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500
+         text-white font-medium ">
+            <div class="py-14 md:flex space-x-10 ">  
+                <li class="py-0"></li>
+            <li class="my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Home</a>
+            </li>
+            <li class=" my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">About</a>
+            </li>
+            <li class=" my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Services</a>
+            </li>
+            <li class=" my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-[#E8F549] duration-200">Works</a>
+            </li>
+        </div> 
+
+            <button class="text-[#E8F549] ml-8 mr-20 text-base font-medium bg-transparent border-solid border-2 rounded-full border-[#E8F549] hover:bg-[#E8F549] hover:text-[#0C4B54] hover:font-semibold duration-200 px-8 py-3">
+                Contact
+            </button>
+       
+
+        </ul>
+
+
+        </nav>
+    </header>
+
+
+<script>
+    function Menu(e){
+        let list = document.querySelector('ul');
+
+      e.name === 'menu' ?  (e.name = "close",list.classList.add('top-[80px]'),list.classList.add('opacity-100')) :
+       (e.name  = "menu", list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+</script>
+</body>
+</html>
