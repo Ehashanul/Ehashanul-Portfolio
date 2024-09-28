@@ -17,36 +17,38 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
         
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   
-<style>
-     .inter {
-              font-family: "Inter", sans-serif;
-          }
-  
-          @keyframes appear {
-              from {
-                  width: 0;
-                  opacity: 0;
-              }
-  
-              to {
-                  width: 24px;
-                  opacity: 1;
-              }
-          }
-  
-          .hover-appear:hover svg {
-              animation: appear 0.3s forwards;
-          }
-</style>
+    <style>
+        body {
+  background-image: url("/images/bg.png");
+}
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+
+        @keyframes appear {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: 24px;
+                opacity: 1;
+            }
+        }
+
+        .hover-appear:hover svg {
+            animation: appear 0.3s forwards;
+        }
+    </style>
+
 
 </head>
 
-<body class=" Inter ">
-<div class="bg-[url('/images/bg.png')] bg-cover bg-center h-screen">
+<body class="bg-cover bg-center h-screen Inter ">
+
     <header class="text-white">
         <nav class="flex items-center justify-between px-20 h-20">
             <img src="images/logowhite.png" alt="Logo" class="h-10">
@@ -109,7 +111,7 @@
       </div>
 </section>
 
-</div>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
