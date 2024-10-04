@@ -55,14 +55,15 @@
 
             <div class="hidden lg:flex items-center  py-10 space-x-10">
                 <ul class="flex items-center space-x-10  text-xl font-medium">
-                    <li><a href="#" class="hover:text-[#E8F549] duration-200">Home</a></li>
+                    <li><a href="#home" class="hover:text-[#E8F549] duration-200">Home</a></li>
                     <li><a href="#About" class="hover:text-[#E8F549] duration-200">About</a></li>
-                    <li><a href="#" class="hover:text-[#E8F549] duration-200">Services</a></li>
+                    <li><a href="#services" class="hover:text-[#E8F549] duration-200">Services</a></li>
                     <li><a href="#" class="hover:text-[#E8F549] duration-200">Works</a></li>
                 </ul>
-                <button
-                    class="text-l  border-2 border-[#E8F549] px-10 py-2 rounded-full text-[#E8F549] font-bold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">Contact</button>
-            </div>
+                <a href="#contact" role="button"  class="text-l  border-2 border-[#E8F549] px-10 py-2 
+                rounded-full text-[#E8F549] font-bold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">contact</a>
+                
+                </div>
 
 
             <button id="mobile-menu-toggle" class="lg:hidden text-white focus:outline-none">
@@ -97,22 +98,22 @@
 
         <div id="mobile-menu" class="hidden lg:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-                <a href="#"
+                <a href="#home"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Home</a>
-                <a href="#"
+                <a href="#About"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">About</a>
-                <a href="#"
+                <a href="#services"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Services</a>
                 <a href="#"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E8F549] duration-200">Works</a>
-                <button
-                    class="border-2 border-[#E8F549] px-8 py-4 rounded-full text-[#E8F549] font-semibold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">Contact</button>
+                    <a href="#contact" role="button"  class="text-l  border-2 border-[#E8F549] px-10 py-2 
+                    rounded-full text-[#E8F549] font-bold hover:bg-[#E8F549] hover:text-[#0C4B54] duration-300">contact</a>
             </div>
         </div>
     </header>
 
     <section>
-        <div class="hero  min-h-screen mx-auto" style="background-image: url(images/full-sign.png);">
+        <div class="hero  min-h-screen mx-auto" style="background-image: url(images/full-sign.png);" id="home">
             <div class="hero-content flex-col lg:flex-row-reverse gap-x-32">
                 <img src="images/banner.png" />
                 <div>
@@ -184,7 +185,7 @@
 
         </section>
 
-        <section class="bg-[#F1F1F1] pb-8">
+        <section class="bg-[#F1F1F1] pb-8" id="services">
             <div class="text-[#040404] pt-11">
                 <h1 class="text-xl text-center font-medium">My services <span class="pl-1">———</span></h1>
                 <h1 class="text-5xl text-center font-bold pt-3">What Can I Do?</h1>
@@ -356,7 +357,7 @@
 
 
 
-        <section class="bg-[#F1F1F1] pb-[72px]">
+        <section class="bg-[#F1F1F1] pb-[72px]" id="contact">
 
             <div class="text-[#040404] pt-[42px]">
                 <h1 class="text-xl text-center font-medium">Contact<span class="pl-1">———</span></h1>
